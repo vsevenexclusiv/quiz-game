@@ -21,13 +21,14 @@
         }
         .user-space {
             width: calc(100% - 10px); /* Fluid width with 5px margin on each side */
-            height: 240px; /* Height of the user-space */
+            min-height: 240px; /* Minimum height to ensure space for content */
             background-color: black;
             position: absolute;
             top: 40px;
             left: 5px; /* 5px margin on the left */
             z-index: 1;
             border-radius: 0;
+            padding-bottom: 20px; /* Add padding at the bottom to ensure content fits */
         }
         .profile-image {
             width: 140px;
@@ -58,7 +59,7 @@
         }
         .buttons .btn {
             margin: 5px;
-            color: rgb(132, 80 ,2); /* White text color for buttons */
+            color: rgb(132, 80, 2); /* Brown text color for buttons */
             border: none; /* Remove default border */
             background: linear-gradient(180deg, rgba(253,217,77,1) 16%, rgba(213,128,0,1) 91%); /* Gold to darker gold gradient */
             padding: 10px 20px; /* Consistent padding for both buttons */
