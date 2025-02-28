@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="categoryMenu" class="menu">
+            <div class="header">
+                <img src="coin.png" alt="Coin Logo" class="coin-logo">
+            </div>
+            <h2>Welcome, Seven!</h2>
+            <div class="user-profile">
+                <img id="playerAvatar" src="avatars/default.png" alt="Player Avatar" class="avatar">
+                <p>Coins: <span id="coins">1000</span></p>
+                <button id="manageProfile">Manage Profile</button>
+            </div>
+            <div id="dailyChallenge" class="challenge-section" style="display: none;">
+                <p>Daily Challenge: Win 1 game today for 100 Coins!</p>
+                <button id="claimChallenge">Claim</button>
+            </div>
+            <div id="weeklyChallenge" class="challenge-section" style="display: none;">
+                <p>Weekly Challenge: Win 5 games this week for 500 Coins!</p>
+                <button id="claimWeeklyChallenge">Claim</button>
+            </div>
+            <h2>Select Category</h2>
+            <button id="planetsButton">Planets</button>
+            <button id="eplButton">Soccer</button>
+            <button id="geographyButton">Geography</button>
+            <button id="buyCoinsBtn">Buy Coins (1 USDT = 100 Coins)</button>
+            <button id="shareTelegram">Share on Telegram</button>
+        </div>
+        <div id="difficultyMenu" class="menu" style="display: none;">
+            <div class="header">
+                <button class="back-btn">← Back</button>
+                <img src="coin.png" alt="Coin Logo" class="coin-logo">
+            </div>
+            <h2>Select Difficulty</h2>
+            <button id="easyButton">Easy</button>
+            <button id="mediumButton">Medium</button>
+            <button id="hardButton">Hard</button>
+        </div>
+        <div id="betMenu" class="menu" style="display: none;">
+            <div class="header">
+                <button class="back-btn">← Back</button>
+                <img src="coin.png" alt="Coin Logo" class="coin-logo">
+            </div>
+            <h2>Choose Your Bet</h2>
+            <div id="betOptions"></div>
+        </div>
+        <div id="game" style="display: none;">
+            <div class="game-header">
+                <div class="player-info">
+                    <img id="playerAvatarGame" src="avatars/default.png" alt="Player Avatar" class="avatar">
+                    <div id="question" class="question"></div>
+                </div>
+                <div class="stats">
+                    <div id="score">Player 1: 0 | Opponent: 0</div>
+                    <div id="coinsGame">Coins: 1000</div>
+                    <div id="timer">Time left: 10s</div>
+                </div>
+            </div>
+            <div class="timer-container">
+                <div id="timerBar" class="timer-bar"></div>
+            </div>
+            <div id="options" class="options"></div>
+            <div class="power-ups">
+                <button id="extraTime" disabled>Extra Time (50 Coins)</button>
+                <button id="fiftyFifty" disabled>50/50 (50 Coins)</button>
+                <button id="streakBreaker" disabled>Streak Breaker (100 Coins)</button>
+            </div>
+            <div id="opponentInfo" class="opponent-info"></div>
+            <button id="replayButton" class="replay-btn">Play Again</button>
+            <div class="sidebar">
+                <div id="achievements" class="panel">
+                    <h3>Achievements</h3>
+                    <ul id="achievementList"></ul>
+                </div>
+                <div id="scoreHistory" class="panel">
+                    <h3>Score History</h3>
+                    <ul id="historyList"></ul>
+                </div>
+                <div id="banker" class="panel">
+                    <h3>Banker</h3>
+                    <p>Total Coins: <span id="bankerCoins">0</span></p>
+                    <button id="buyDarkTheme">Buy Dark Theme (500 Coins)</button>
+                    <button id="buyNeonTheme">Buy Neon Theme (500 Coins)</button>
+                    <div id="avatarShop">
+                        <h4>Avatar Shop</h4>
+                        <button id="avatar1">Cat (50 Coins)</button>
+                        <button id="avatar2">Dog (50 Coins)</button>
+                        <button id="avatar3">Robot (50 Coins)</button>
+                    </div>
+                    <div id="nftShop" class="panel">
+                        <h4>NFT Avatar Shop</h4>
+                        <button id="nft1">Golden Coin (10 USDT)</button>
+                        <button id="nft2">Neon Coin (10 USDT)</button>
+                        <button id="nft3">Dark Coin (10 USDT)</button>
+                        <button id="nft4">Rainbow Coin (10 USDT)</button>
+                        <button id="nft5">Pulse Coin (10 USDT)</button>
+                        <button id="nft6">Holographic Coin (20 USDT)</button>
+                        <button id="nft7">Fiery Coin (20 USDT)</button>
+                        <button id="nft8">Icy Coin (20 USDT)</button>
+                        <button id="nft9">Crystal Coin (50 USDT)</button>
+                        <button id="nft10">Plasma Coin (50 USDT)</button>
+                    </div>
+                </div>
+                <div id="streakLeaderboard" class="panel">
+                    <h3>Top Streaks</h3>
+                    <ul id="topStreaks"></ul>
+                </div>
+            </div>
+            <div id="levelTable" class="panel">
+                <h3>Leaderboard</h3>
+                <table>
+                    <thead>
+                        <tr><th>Name</th><th>Wins</th><th>Losses</th><th>Coins</th><th>Streak</th></tr>
+                    </thead>
+                    <tbody id="leaderboardBody"></tbody>
+                </table>
+            </div>
+            <div class="footer">
+                <button class="footer-btn" id="storeBtn">Store</button>
+                <button class="footer-btn" id="vaultBtn">Vault</button>
+                <button class="footer-btn" id="userBtn">User</button>
+                <button class="footer-btn" id="aboutBtn">About</button>
+            </div>
+            <div id="coinAnimation" class="coin-animation"></div>
+        </div>
+    </div>
+
+    <audio id="correctSound" src="correct.mp3"></audio>
+    <audio id="incorrectSound" src="incorrect.mp3"></audio>
+    <audio id="bgMusic" src="background.mp3" loop></audio>
+    <audio id="lowTimeSound" src="lowtime.mp3"></audio>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

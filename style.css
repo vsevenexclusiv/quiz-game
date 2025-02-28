@@ -1,0 +1,420 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    border: 2px solid #8b6a2f;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.menu, #game {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.coin-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 10px;
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.back-btn:hover {
+    color: #0056b3;
+}
+
+h2, h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+h4 {
+    color: #ff9800;
+    margin: 10px 0;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1em;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #ffd700;
+    color: #8b6a2f;
+    border: 2px solid #8b6a2f;
+    border-radius: 10px;
+    min-width: 60px;
+    min-height: 60px;
+    transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled), button:active:not(:disabled) {
+    background-color: #ffeb3b;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    border-color: #ccc;
+    color: #666;
+}
+
+#planetsButton, #eplButton, #geographyButton, #easyButton, #mediumButton, #hardButton, .replay-btn, #extraTime, #fiftyFifty, #buyDarkTheme, #buyNeonTheme, #avatar1, #avatar2, #avatar3, #nft1, #nft2, #nft3, #nft4, #nft5, #buyCoinsBtn, #manageProfile, #backToHome, #avatarDefault, #avatarCat, #avatarDog, #avatarRobot, #nftGold, #nftNeon, #nftDark, #nftRainbow, #nftPulse, #skinDefault, #skinNeon, #skinDark, .footer-btn {
+    background-color: #ffd700;
+    color: #8b6a2f;
+    border: 2px solid #8b6a2f;
+    border-radius: 10px;
+}
+
+#planetsButton:hover, #eplButton:hover, #geographyButton:hover, #easyButton:hover, #mediumButton:hover, #hardButton:hover, .replay-btn:hover, #extraTime:hover:not(:disabled), #fiftyFifty:hover:not(:disabled), #buyDarkTheme:hover, #buyNeonTheme:hover, #avatar1:hover, #avatar2:hover, #avatar3:hover, #nft1:hover, #nft2:hover, #nft3:hover, #nft4:hover, #nft5:hover, #buyCoinsBtn:hover, #manageProfile:hover, #backToHome:hover, #avatarDefault:hover, #avatarCat:hover, #avatarDog:hover, #avatarRobot:hover, #nftGold:hover, #nftNeon:hover, #nftDark:hover, #nftRainbow:hover, #nftPulse:hover, #skinDefault:hover, #skinNeon:hover, #skinDark:hover, .footer-btn:hover {
+    background-color: #ffeb3b;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.avatar.small {
+    width: 30px;
+    height: 30px;
+}
+
+.nft-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.question {
+    font-size: 1.5em;
+    font-weight: bold;
+    flex: 1;
+    min-width: 200px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2em;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.options button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.timer-container {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.timer-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: width 0.1s linear;
+}
+
+.power-ups {
+    margin: 20px 0;
+}
+
+.opponent-info {
+    font-size: 1.1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.replay-btn {
+    display: none;
+    background-color: #28a745;
+}
+
+.replay-btn:hover {
+    background-color: #218838;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 300px;
+    width: 100%;
+}
+
+.panel {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+.streak {
+    font-style: italic;
+    color: #666;
+}
+
+/* Coin Animation */
+.coin-animation {
+    position: absolute;
+    pointer-events: none;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.coin {
+    width: 30px;
+    height: 30px;
+    background: url('coin.png') no-repeat center/contain;
+    border-radius: 50%;
+    position: absolute;
+    animation: flyCoin 1s ease-out forwards;
+}
+
+@keyframes flyCoin {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    50% { transform: translate(var(--tx), calc(var(--ty) / 2)) scale(1.2); opacity: 1; }
+    100% { transform: translate(var(--tx), var(--ty)) scale(1); opacity: 0; }
+}
+
+/* Themes */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.dark-theme .menu, .dark-theme .panel, .dark-theme #game {
+    background: #333;
+}
+
+body.neon-theme {
+    background-color: #000;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+}
+
+.neon-theme .menu, .neon-theme .panel, .neon-theme #game {
+    background: #111;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.neon-theme button {
+    background-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+    border-color: #ff00ff;
+    color: #000;
+}
+
+.neon-theme button:hover:not(:disabled) {
+    background-color: #cc00cc;
+}
+
+.neon-theme .coin {
+    background: url('coin.png') no-repeat center/contain;
+    box-shadow: 0 0 10px #ff0;
+}
+
+/* Responsive for Telegram */
+@media (max-width: 750px) {
+    .game-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sidebar {
+        min-width: 100%;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .back-btn {
+        position: static;
+        margin-bottom: 10px;
+    }
+    .coin-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .user-profile, #dailyChallenge, .profile-panel {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-info, .avatar-options, .nft-options, .skin-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.footer-btn {
+    background-color: #ffd700;
+    color: #8b6a2f;
+    border: 2px solid #8b6a2f;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    min-width: 80px;
+    transition: background-color 0.3s;
+}
+
+.footer-btn:hover {
+    background-color: #ffeb3b;
+}
+
+#storeBtn:hover, #vaultBtn:hover, #userBtn:hover, #aboutBtn:hover {
+    background-color: #ffeb3b;
+}
+
+/* User Profile and Challenge */
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.user-profile button {
+    margin-left: 10px;
+}
+
+.challenge-section {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.challenge-section button {
+    width: 100px;
+    margin: 0 auto;
+}
+
+/* Profile Panel */
+.profile-panel {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none; /* Start hidden, show on click */
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000; /* Ensure it stays on top */
+    position: relative; /* Ensure proper stacking */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.avatar-options, .nft-options, .skin-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.avatar-options button, .nft-options button, .skin-options button {
+    flex: 1;
+    min-width: 120px;
+}
