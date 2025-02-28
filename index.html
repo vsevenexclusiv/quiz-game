@@ -19,15 +19,15 @@
             width: 100%;
             margin: 20px 0;
         }
-        .black-box {
-            width: calc(100% - 20px); /* Fluid width with 10px margin on each side */
-            height: 260px; /* Height of the black box */
+        .user-space {
+            width: calc(100% - 10px); /* Fluid width with 5px margin on each side */
+            height: 240px; /* Height of the user-space */
             background-color: black;
             position: absolute;
             top: 40px;
-            left: 10px; /* 10px margin on the left */
+            left: 5px; /* 5px margin on the left */
             z-index: 1;
-            border-radius: 0; /* Optional: Add rounded corners to the black box */
+            border-radius: 0;
         }
         .profile-image {
             width: 140px;
@@ -44,7 +44,7 @@
             font-size: 24px;
             margin: 10px 0;
             position: relative;
-            z-index: 3; /* Ensure username is above the black box */
+            z-index: 3; /* Ensure username is above the user-space */
             color: white; /* White text color */
             padding-top: 0; /* Add padding to position text properly */
             top: -50px;
@@ -54,25 +54,32 @@
             margin: 20px 0;
             position: relative;
             z-index: 4; /* Ensure buttons are above other elements */
-            top: -80px;
+            top: -70px;
         }
         .buttons .btn {
             margin: 5px;
-            color: white; /* White text color for buttons */
-            border-color: white; /* White border for buttons */
-            background-color: transparent; /* Transparent background for buttons */
+            color: rgb(132, 80 ,2); /* White text color for buttons */
+            border: none; /* Remove default border */
+            background: linear-gradient(180deg, rgba(253,217,77,1) 16%, rgba(213,128,0,1) 91%); /* Gold to darker gold gradient */
+            padding: 10px 20px; /* Consistent padding for both buttons */
+            font-size: 0.8em; /* Consistent font size */
+            width: 150px; /* Same width for both buttons */
+            text-align: center; /* Center text inside buttons */
+            transition: background 0.3s ease; /* Smooth transition for hover effect */
         }
         .buttons .btn:hover {
-            background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
+            background: linear-gradient(180deg, rgba(253,217,77,1) 16%, rgba(213,128,0,1) 91%); /* Reverse gradient on hover */
         }
         .custom-text {
             text-align: center;
             margin: 20px 0;
             position: relative;
-            z-index: 3; /* Ensure custom text is above the black box */
+            z-index: 3; /* Ensure custom text is above the user-space */
             color: white; /* White text color */
-            padding-bottom: 20px; /* Add padding to position text properly */
+            padding: 0 15px; /* Add padding to prevent text from touching edges */
             top: -60px;
+            font-size: 16px; /* Adjust font size for better readability */
+            line-height: 1.5; /* Improve line spacing */
         }
     </style>
 </head>
@@ -80,7 +87,7 @@
     <div class="jumbotron">
         <div class="container">
             <div class="profile-container">
-                <div class="black-box"></div>
+                <div class="user-space"></div>
                 <img src="avatars/default.png" alt="User Profile Image" class="profile-image">
             </div>
             <div class="username">Username</div>
@@ -88,8 +95,8 @@
                 Level 0 <br>Win 5 games this week for 500 Coins! (Progress: 0/5)
             </div>
             <div class="buttons">
-                <button class="btn btn-primary">Button 1</button>
-                <button class="btn btn-secondary">Button 2</button>
+                <button class="btn btn-primary text-uppercase">Coins: 0</button>
+                <button class="btn btn-secondary text-uppercase">Manage Profile</button>
             </div>
         </div>
     </div>
