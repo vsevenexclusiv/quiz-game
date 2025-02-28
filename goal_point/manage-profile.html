@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Profile - Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="header">
+                <img src="coin.png" alt="Coin Logo" class="coin-logo">
+            </div>
+            <h2>Manage Profile</h2>
+            <div class="profile-panel">
+                <div class="profile-info">
+                    <p>Name: Seven</p>
+                    <p>Coins: <span id="profileCoins">1000</span></p>
+                    <p>Wins: <span id="profileWins">0</span> / Losses: <span id="profileLosses">0</span></p>
+                    <p>Streak: <span id="profileStreak">0</span>-streak</p>
+                </div>
+                <h3>Current Avatar</h3>
+                <img id="currentAvatar" src="avatars/default.png" alt="Current Avatar" class="avatar">
+                <h3>Avatars</h3>
+                <div class="avatar-options">
+                    <button id="avatarDefault">Default (Free)</button>
+                    <button id="avatarCat">Cat (50 Coins)</button>
+                    <button id="avatarDog">Dog (50 Coins)</button>
+                    <button id="avatarRobot">Robot (50 Coins)</button>
+                </div>
+                <h3>NFT Avatars</h3>
+                <div class="nft-options">
+                    <button id="nft1">Golden Coin (10 USDT)</button>
+                    <button id="nft2">Neon Coin (10 USDT)</button>
+                    <button id="nft3">Dark Coin (10 USDT)</button>
+                    <button id="nft4">Rainbow Coin (10 USDT)</button>
+                    <button id="nft5">Pulse Coin (10 USDT)</button>
+                    <button id="nft6">Holographic Coin (20 USDT)</button>
+                    <button id="nft7">Fiery Coin (20 USDT)</button>
+                    <button id="nft8">Icy Coin (20 USDT)</button>
+                    <button id="nft9">Crystal Coin (50 USDT)</button>
+                    <button id="nft10">Plasma Coin (50 USDT)</button>
+                </div>
+                <h3>Coin Skin</h3>
+                <div class="skin-options">
+                    <button id="skinDefault">Default</button>
+                    <button id="skinNeon">Neon</button>
+                    <button id="skinDark">Dark</button>
+                </div>
+                <div id="challengeProgress">
+                    <h3>Challenge Progress</h3>
+                    <p>Daily: <span id="dailyProgress">0/1 Wins</span></p>
+                    <p>Weekly: <span id="weeklyProgress">0/5 Wins</span></p>
+                </div>
+                <button id="backToHome">Back to Home</button>
+                <button id="shareTelegram">Share on Telegram</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="manage-profile.js"></script>
+</body>
+</html>
